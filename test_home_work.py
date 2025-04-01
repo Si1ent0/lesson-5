@@ -1,5 +1,5 @@
 import os
-from selene import browser, be, have, command
+from selene import browser, be, have
 
 
 def test_send_practice_form_(open_url):
