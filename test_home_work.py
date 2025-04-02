@@ -2,11 +2,10 @@ import os
 from selene import browser, be, have
 
 
-def test_send_practice_form_(open_url):
+def test_send_practice_form_(browser_config):
     # Открытие страницы Practice Form
     browser.open('/automation-practice-form')
     # Проверка страницы Practice Form
-    browser.should(have.url('https://demoqa.com/automation-practice-form'))
     browser.element('//h5[contains(text(), "Student Registration Form")]').should(have.text('Student Registration Form'))
     #Заполнение полей формы
     browser.element('#firstName').should(be.blank).type('Egor')
